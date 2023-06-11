@@ -1,7 +1,10 @@
 {
-	"extends": ["next/core-web-vitals", "eslint:recommended", "airbnb", "prettier"],
+	"extends": ["next/core-web-vitals", "eslint:recommended", "airbnb", "airbnb-typescript", "prettier"],
 	"plugins": ["prettier"],
 	"root": true,
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
 	"rules": {
 		"prettier/prettier": [
 			"error",
