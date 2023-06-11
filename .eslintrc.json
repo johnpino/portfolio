@@ -1,12 +1,14 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "root": true
+	"extends": ["next/core-web-vitals", "eslint:recommended", "airbnb", "prettier"],
+	"plugins": ["prettier"],
+	"root": true,
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"semi": false
+			}
+		],
+		"react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+	}
 }
