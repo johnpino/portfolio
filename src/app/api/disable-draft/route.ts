@@ -1,6 +1,7 @@
+/* eslint-disable import/prefer-default-export */
 import { draftMode } from 'next/headers'
 
-export default async function GET() {
+export async function GET() {
 	draftMode().disable()
 	return new Response('Draft mode is disabled')
 }
