@@ -1,28 +1,25 @@
-import getClient from '@/lib/getClient'
-import { gql } from '@apollo/client'
-
 import type { PageCollection, Page } from '@/types/Page'
-
-import { draftMode } from 'next/headers'
 
 import assert from 'assert'
 
+assert(process.env.CONTENTFUL_API_BASE_URL)
+assert(process.env.CONTENTFUL_API_ENDPOINT)
+assert(process.env.CONTENTFUL_SPACE_ID)
+assert(process.env.CONTENTFUL_ENVIRONMENT)
 assert(process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN)
 assert(process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN)
 
-export default async function getPage(slug: string, preview?: boolean): Promise<Page | null> {
-	const { isEnabled: isDraftMode } = draftMode()
-
-	const shouldUsePreview: boolean = preview || (isDraftMode && preview === undefined)
-
-	const authHeader = shouldUsePreview
+export default async function getPage(slug: string, preview: boolean = false): Promise<Page | null> {
+	const authHeader = preview
 		? `Bearer ${process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN}`
 		: `Bearer ${process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN}`
 
-	const query = gql`
+	const query = `
 		query pageCollectionQuery {
-			pageCollection(where: { slug: "${slug}" }, preview: ${shouldUsePreview}) {
+			pageCollection(where: { slug: "${slug}" }, preview: ${preview}) {
+				__typename
 				items {
+					__typename
 					sys {
 						id
 					}
@@ -48,22 +45,19 @@ export default async function getPage(slug: string, preview?: boolean): Promise<
 		}
 	`
 
-	const { data }: { data: PageCollection } = await getClient().query({
-		query,
-		context: {
+	const fetchResponse = await fetch(
+		`${process.env.CONTENTFUL_API_BASE_URL}${process.env.CONTENTFUL_API_ENDPOINT}${process.env.CONTENTFUL_SPACE_ID}/environments/${process.env.CONTENTFUL_ENVIRONMENT}`,
+		{
+			method: 'POST',
 			headers: {
-				authorization: authHeader,
+				'Content-Type': 'application/json',
+				Authorization: authHeader,
 			},
-			fetchOptions: {
-				/**
-				 * Revalidation is needed to skip cache and set dynamic rendering to true.
-				 * Currently, Next is not able to set dynamic rendering automatically with third-party fetch libraries.
-				 * https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#default-caching-behavior
-				 */
-				next: { revalidate: isDraftMode ? 0 : false },
-			},
+			body: JSON.stringify({ query }),
 		},
-	})
+	)
+
+	const { data }: { data: PageCollection } = await fetchResponse.json()
 
 	if (data.pageCollection.items.length === 0) {
 		return null
