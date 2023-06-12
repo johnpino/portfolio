@@ -1,7 +1,9 @@
 import getClient from '@/lib/getClient'
 import { gql } from '@apollo/client'
 
-export default async function getPage(slug: string) {
+import type { PageCollection, Page } from '@/types/Page'
+
+export default async function getPage(slug: string): Promise<Page> {
 	const query = gql`
 		query pageCollectionQuery {
 			pageCollection(where: { slug: "${slug}" }) {
@@ -27,7 +29,7 @@ export default async function getPage(slug: string) {
 		}
 	`
 
-	const { data } = await getClient().query({ query })
+	const { data }: { data: PageCollection } = await getClient().query({ query })
 
-	return data
+	return data.pageCollection.items[0]
 }
