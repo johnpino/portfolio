@@ -2,6 +2,9 @@ import type { DisabledProps } from '@/components/Disabled'
 
 type FeatureSkeleton<T, K> = {
 	__typename: T
+	sys: {
+		id: string
+	}
 } & K
 
 export type Feature = FeatureSkeleton<'Disabled', DisabledProps>
