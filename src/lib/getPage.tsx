@@ -54,6 +54,14 @@ export default async function getPage(slug: string, preview?: boolean): Promise<
 			headers: {
 				authorization: authHeader,
 			},
+			fetchOptions: {
+				/**
+				 * Revalidation is needed to skip cache and set dynamic rendering to true.
+				 * Currently, Next is not able to set dynamic rendering automatically with third-party fetch libraries.
+				 * https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#default-caching-behavior
+				 */
+				next: { revalidate: isDraftMode ? 0 : false },
+			},
 		},
 	})
 

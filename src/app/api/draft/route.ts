@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { cookies, draftMode } from 'next/headers'
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
@@ -8,6 +7,8 @@ import getPage from '@/lib/getPage'
 import assert from 'assert'
 
 assert(process.env.CONTENTFUL_PREVIEW_SECRET)
+
+export const dynamic = 'force-dynamic'
 
 export async function GET(request: NextRequest) {
 	const secret = request.nextUrl.searchParams.get('secret')
