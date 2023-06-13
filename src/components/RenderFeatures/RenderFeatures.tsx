@@ -13,7 +13,7 @@ import { useContentfulLivePreviewFeatures } from '@/hooks/useContentfulLivePrevi
 export default function RenderFeatures({ data }: { data: Page | null }) {
 	if (!data) notFound()
 
-	const { updatedProps /* inspectorTags */ } = useContentfulLivePreviewFeatures(data)
+	const { updatedProps, inspectorTags } = useContentfulLivePreviewFeatures(data)
 
 	const { featuresCollection } = updatedProps
 
@@ -23,7 +23,7 @@ export default function RenderFeatures({ data }: { data: Page | null }) {
 
 		return (
 			<main key={feature.sys.id} className="flex flex-col items-center justify-center min-h-screen p-24">
-				<Component {...feature} />
+				<Component {...feature} inspectorTags={inspectorTags} />
 			</main>
 		)
 	})
