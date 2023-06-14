@@ -40,7 +40,7 @@ export async function GET(request: NextRequest) {
 
 	// Redirect to the path from the fetched post
 	// We don't redirect to searchParams.slug as that might lead to open redirect vulnerabilities
-	const url: string = page.slug
+	const url: string = `draft/${page.slug}`
 
 	return NextResponse.redirect(new URL(url, request.nextUrl.origin))
 }

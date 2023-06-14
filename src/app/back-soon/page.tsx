@@ -5,8 +5,6 @@ import RenderFeatures from '@/components/RenderFeatures'
 
 import { draftMode } from 'next/headers'
 
-export const dynamic = 'force-dynamic'
-
 export default async function BackSoon() {
 	const { isEnabled: isDraftMode } = draftMode()
 

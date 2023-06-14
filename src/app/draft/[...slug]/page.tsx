@@ -10,7 +10,9 @@ import type { Params } from '@/types/Params'
 
 import RenderFeatures from '@/components/RenderFeatures'
 
-export default async function Page({ params }: { params: Params }) {
+export const dynamic = 'force-dynamic'
+
+export default async function Draft({ params }: { params: Params }) {
 	const slug = getSlug(params)
 
 	if (!slug) notFound()
