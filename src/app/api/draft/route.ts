@@ -7,6 +7,7 @@ import getPage from '@/lib/getPage'
 import assert from 'assert'
 
 assert(process.env.CONTENTFUL_PREVIEW_SECRET)
+assert(process.env.BYPASS_BACK_SOON)
 
 export const dynamic = 'force-dynamic'
 
@@ -35,8 +36,13 @@ export async function GET(request: NextRequest) {
 	// Add extra properties to draftMode cookie
 	const draftModeCookie = cookies().get('__prerender_bypass')?.value
 
-	if (draftModeCookie)
+	if (draftModeCookie) {
 		cookies().set('__prerender_bypass', draftModeCookie, { sameSite: 'none', secure: true, httpOnly: true })
+	}
+
+	if (process.env.BYPASS_BACK_SOON) {
+		cookies().set('__d', process.env.BYPASS_BACK_SOON)
+	}
 
 	// Redirect to the path from the fetched post
 	// We don't redirect to searchParams.slug as that might lead to open redirect vulnerabilities
