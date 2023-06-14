@@ -5,7 +5,7 @@ type FeatureSkeleton<T, K> = {
 	sys: {
 		id: string
 	}
-} & Exclude<K, 'inspectorTags'>
+} & K
 
 export type Feature = FeatureSkeleton<'Disabled', DisabledProps>
 
