@@ -54,6 +54,7 @@ export default async function getPage(slug: string, preview: boolean = false): P
 				Authorization: authHeader,
 			},
 			body: JSON.stringify({ query }),
+			cache: preview ? 'no-store' : 'default',
 		},
 	)
 
