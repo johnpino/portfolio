@@ -12,6 +12,17 @@ const config = {
 	// setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 
 	testEnvironment: 'jest-environment-jsdom',
+
+	coverageThreshold: {
+		global: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: -10,
+		},
+	},
+
+	setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
