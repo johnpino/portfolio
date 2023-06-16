@@ -1,20 +1,41 @@
 {
-	"extends": ["next/core-web-vitals", "eslint:recommended", "airbnb", "airbnb-typescript", "prettier"],
-	"plugins": ["prettier"],
-	"root": true,
-	"parserOptions": {
-		"project": "./tsconfig.json"
-	},
-	"rules": {
-		"prettier/prettier": [
-			"error",
-			{
-				"semi": false
-			}
-		],
-		"react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-		"react/jsx-props-no-spreading": "off",
-		"react/destructuring-assignment": "off"
-	},
-	"ignorePatterns": ["**/*.mjs"]
+ "extends": [
+  "next/core-web-vitals",
+  "eslint:recommended",
+  "airbnb",
+  "airbnb-typescript",
+  "prettier",
+  "plugin:storybook/recommended"
+ ],
+ "plugins": [
+  "prettier"
+ ],
+ "root": true,
+ "parserOptions": {
+  "project": "./tsconfig.json"
+ },
+ "rules": {
+  "prettier/prettier": [
+   "error",
+   {
+    "semi": false
+   }
+  ],
+  "react/jsx-filename-extension": [
+   2,
+   {
+    "extensions": [
+     ".js",
+     ".jsx",
+     ".ts",
+     ".tsx"
+    ]
+   }
+  ],
+  "react/jsx-props-no-spreading": "off",
+  "react/destructuring-assignment": "off"
+ },
+ "ignorePatterns": [
+  "**/*.mjs"
+ ]
 }
