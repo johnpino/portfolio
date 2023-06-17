@@ -1,0 +1,15 @@
+{
+	"boxShadow": {
+		"default": {
+			"value": {
+				"x": "0",
+				"y": "0",
+				"blur": "15",
+				"spread": "-5",
+				"color": "($colors.black, 0.2)",
+				"type": "dropShadow"
+			},
+			"type": "boxShadow"
+		}
+	}
+}

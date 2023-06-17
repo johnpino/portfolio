@@ -1,0 +1,16 @@
+{
+	"sizing": {
+		"1": {
+			"value": "8",
+			"type": "sizing"
+		},
+		"2": {
+			"value": "12",
+			"type": "sizing"
+		},
+		"3": {
+			"value": "16",
+			"type": "sizing"
+		}
+	}
+}

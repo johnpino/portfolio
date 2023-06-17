@@ -1,0 +1,28 @@
+{
+	"spacing": {
+		"none": {
+			"value": "0",
+			"type": "spacing"
+		},
+		"xs": {
+			"value": "2",
+			"type": "spacing"
+		},
+		"sm": {
+			"value": "4",
+			"type": "spacing"
+		},
+		"md": {
+			"value": "8",
+			"type": "spacing"
+		},
+		"lg": {
+			"value": "16",
+			"type": "spacing"
+		},
+		"xl": {
+			"value": "32",
+			"type": "spacing"
+		}
+	}
+}
