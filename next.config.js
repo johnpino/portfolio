@@ -7,6 +7,8 @@ const nextConfig = {
 		config.resolve.alias = {
 			...config.resolve.alias,
 			'@/vars': path.resolve(__dirname, '.css-vars'),
+			'@/modules': path.resolve(__dirname, 'node_modules'),
+			'@/src': path.resolve(__dirname, 'src'),
 		}
 
 		return config
