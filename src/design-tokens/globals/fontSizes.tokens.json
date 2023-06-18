@@ -19,6 +19,26 @@
 		"xl": {
 			"value": "{fontSizes.body} * 1.25",
 			"type": "fontSizes"
+		},
+		"2xl": {
+			"value": "{fontSizes.body} * 1.5",
+			"type": "fontSizes"
+		},
+		"3xl": {
+			"value": "{fontSizes.body} * 1.875",
+			"type": "fontSizes"
+		},
+		"4xl": {
+			"value": "{fontSizes.body} * 2.25",
+			"type": "fontSizes"
+		},
+		"5xl": {
+			"value": "{fontSizes.body} * 3",
+			"type": "fontSizes"
+		},
+		"6xl": {
+			"value": "{fontSizes.body} * 3.75",
+			"type": "fontSizes"
 		}
 	}
 }
