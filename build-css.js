@@ -34,18 +34,20 @@ StyleDictionaryPackage.registerTransformGroup({
 })
 
 function getStyleDictionaryConfig(theme) {
-	console.log(`tokens/${theme}/*.tokens.json`)
 	return {
-		include: [`tokens/globals/*.tokens.json`, `tokens/themes/${theme}/*.tokens.json`],
-		source: [`tokens/components/*.tokens.json`],
+		include: [`src/design-tokens/globals/*.tokens.json`],
+		source: [`src/design-tokens/themes/${theme}/*.tokens.json`],
 		platforms: {
 			scss: {
 				transformGroup: 'custom',
-				buildPath: `.dist/styles/${theme}/`,
+				buildPath: `src/scss/themes/`,
 				files: [
 					{
-						destination: 'tokens.scss',
+						destination: `_${theme}.scss`,
 						format: 'scss/variables',
+						options: {
+							outputReferences: true,
+						},
 						filter: (token) => token.isSource,
 					},
 				],
@@ -56,6 +58,61 @@ function getStyleDictionaryConfig(theme) {
 
 console.log('Build started...')
 
+/**
+ * Globals
+ */
+
+const globals = StyleDictionaryPackage.extend({
+	source: [`src/design-tokens/globals/*.tokens.json`],
+	platforms: {
+		scss: {
+			transformGroup: 'custom',
+			buildPath: `src/scss/abstracts/`,
+			files: [
+				{
+					destination: `_variables.scss`,
+					format: 'scss/variables',
+				},
+			],
+		},
+	},
+})
+
+globals.cleanAllPlatforms()
+globals.buildAllPlatforms()
+
+/**
+ * Components
+ */
+
+const components = StyleDictionaryPackage.extend({
+	include: [`src/design-tokens/globals/*.tokens.json`, `src/design-tokens/themes/**/*.tokens.json`],
+	source: [`src/design-tokens/components/*.tokens.json`],
+	platforms: {
+		scss: {
+			transformGroup: 'custom',
+			buildPath: `src/scss/components/`,
+			files: [
+				{
+					destination: `_components.scss`,
+					format: 'scss/variables',
+					options: {
+						outputReferences: true,
+					},
+					filter: (token) => token.isSource,
+				},
+			],
+		},
+	},
+})
+
+components.cleanAllPlatforms()
+components.buildAllPlatforms()
+
+/**
+ * Themes
+ */
+
 const themes = ['base', 'dark']
 
 themes.forEach((theme) => {
@@ -64,7 +121,8 @@ themes.forEach((theme) => {
 
 	const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(theme))
 
-	StyleDictionary.buildPlatform('scss')
+	StyleDictionary.cleanAllPlatforms()
+	StyleDictionary.buildAllPlatforms()
 
 	console.log('\nEnd processing')
 })
