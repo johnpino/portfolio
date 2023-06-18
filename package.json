@@ -3,8 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev & chokidar  \"src/**/*.tokens.json\" -c \"npm run build:dictionary\"",
-		"build": "next build && node build-css.js",
+		"dev": "\"npm run build:dictionary\" && next dev & chokidar &  \"src/**/*.tokens.json\" -c \"npm run build:dictionary\"",
+		"build": "node build-css.js && next build",
 		"build:storybook": "storybook build",
 		"build:dictionary": "node process-design-tokens.js",
 		"watch:dictionary": "chokidar  \"src/**/*.tokens.json\" -c \"npm run build:dictionary\"",

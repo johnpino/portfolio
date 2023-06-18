@@ -1,8 +1,0 @@
-{
-	"disabled": {
-		"color": {
-			"value": "{colors.foreground}",
-			"type": "color"
-		}
-	}
-}

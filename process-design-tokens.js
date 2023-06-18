@@ -16,7 +16,7 @@ function getStyleDictionaryConfig(theme) {
 		platforms: {
 			scss: {
 				transformGroup: 'custom',
-				buildPath: `src/styles/themes/`,
+				buildPath: `.css-vars/themes/`,
 				files: [
 					{
 						destination: `_${theme}.css`,
@@ -43,7 +43,7 @@ const globals = StyleDictionaryPackage.extend({
 	platforms: {
 		scss: {
 			transformGroup: 'custom',
-			buildPath: `src/styles/global/`,
+			buildPath: `.css-vars/global/`,
 			files: [
 				{
 					destination: `_global.css`,
@@ -67,7 +67,7 @@ const components = StyleDictionaryPackage.extend({
 	platforms: {
 		scss: {
 			transformGroup: 'custom',
-			buildPath: `src/styles/components/`,
+			buildPath: `.css-vars/components/`,
 			files: [
 				{
 					destination: `_components.css`,
