@@ -1,0 +1,46 @@
+{
+	"disabled": {
+		"color": {
+			"value": "{colors.foreground}",
+			"type": "color"
+		},
+		"heading": {
+			"font": {
+				"value": {
+					"fontSize": "{fontSizes.4xl}"
+				},
+				"type": "typography"
+			},
+			"margin-bottom": {
+				"value": "{spacing.xs}",
+				"type": "spacing"
+			}
+		},
+		"spotlight": {
+			"value": {
+				"fontWeight": "{fontWeights.bold}",
+				"fontSize": "{fontSizes.6xl}"
+			},
+			"type": "typography"
+		},
+		"subheading": {
+			"font": {
+				"value": {
+					"fontSize": "{fontSizes.body}"
+				},
+				"type": "typography"
+			},
+			"margin-bottom": {
+				"value": "{spacing.xs}",
+				"type": "spacing"
+			}
+		},
+		"description": {
+			"value": {
+				"fontSize": "{fontSizes.sm}",
+				"fontWeight": "{fontWeights.light}"
+			},
+			"type": "typography"
+		}
+	}
+}

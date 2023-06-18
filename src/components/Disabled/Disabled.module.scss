@@ -1,0 +1,22 @@
+.disabled {
+	color: var(--disabled-color);
+
+	&__heading {
+		font: var(--disabled-heading-font);
+		margin-bottom: var(--disabled-heading-margin-bottom);
+
+		.spotlight {
+			font: var(--disabled-spotlight);
+		}
+	}
+
+	&__subheading {
+		font: var(--disabled-subheading-font);
+		margin-bottom: var(--disabled-subheading-margin-bottom);
+	}
+
+	&__description {
+		font: var(--disabled-description);
+		font-style: italic;
+	}
+}
