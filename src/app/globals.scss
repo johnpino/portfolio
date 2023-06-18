@@ -1,0 +1,9 @@
+@import url('../styles/global/_global.css');
+@import url('../styles/themes/_base.css');
+@import url('../styles/components/_components.css');
+
+body {
+	background: var(--colors-background);
+}
+
+@import url('../styles/themes/_dark.css') (prefers-color-scheme: dark);

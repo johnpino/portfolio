@@ -1,28 +1,3 @@
-/* eslint-disable no-console */
-// const { registerTransforms } = require('@tokens-studio/sd-transforms')
-// const StyleDictionary = require('style-dictionary')
-
-// registerTransforms(StyleDictionary)
-
-// const sd = StyleDictionary.extend({
-// 	source: ['**/*.tokens.json'],
-// 	platforms: {
-// 		css: {
-// 			transformGroup: 'tokens-studio',
-// 			buildPath: 'build/css/',
-// 			files: [
-// 				{
-// 					destination: 'variables.css',
-// 					format: 'css/variables',
-// 				},
-// 			],
-// 		},
-// 	},
-// })
-
-// sd.cleanAllPlatforms()
-// sd.buildAllPlatforms()
-
 const { registerTransforms, transforms } = require('@tokens-studio/sd-transforms')
 const StyleDictionaryPackage = require('style-dictionary')
 
@@ -30,7 +5,7 @@ registerTransforms(StyleDictionaryPackage)
 
 StyleDictionaryPackage.registerTransformGroup({
 	name: 'custom',
-	transforms: [...transforms, 'name/cti/kebab'].filter((transform) => transform !== 'ts/size/px'),
+	transforms: [...transforms, 'name/cti/kebab'],
 })
 
 function getStyleDictionaryConfig(theme) {
@@ -40,11 +15,11 @@ function getStyleDictionaryConfig(theme) {
 		platforms: {
 			scss: {
 				transformGroup: 'custom',
-				buildPath: `src/scss/themes/`,
+				buildPath: `src/styles/themes/`,
 				files: [
 					{
-						destination: `_${theme}.scss`,
-						format: 'scss/variables',
+						destination: `_${theme}.css`,
+						format: 'css/variables',
 						options: {
 							outputReferences: true,
 						},
@@ -67,11 +42,11 @@ const globals = StyleDictionaryPackage.extend({
 	platforms: {
 		scss: {
 			transformGroup: 'custom',
-			buildPath: `src/scss/abstracts/`,
+			buildPath: `src/styles/global/`,
 			files: [
 				{
-					destination: `_variables.scss`,
-					format: 'scss/variables',
+					destination: `_global.css`,
+					format: 'css/variables',
 				},
 			],
 		},
@@ -91,11 +66,11 @@ const components = StyleDictionaryPackage.extend({
 	platforms: {
 		scss: {
 			transformGroup: 'custom',
-			buildPath: `src/scss/components/`,
+			buildPath: `src/styles/components/`,
 			files: [
 				{
-					destination: `_components.scss`,
-					format: 'scss/variables',
+					destination: `_components.css`,
+					format: 'css/variables',
 					options: {
 						outputReferences: true,
 					},
