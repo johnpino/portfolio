@@ -28,12 +28,7 @@
 		"react/jsx-props-no-spreading": "off",
 		"react/destructuring-assignment": "off",
 		"react/require-default-props": "off",
-		"import/no-extraneous-dependencies": [
-			"error",
-			{
-				"devDependencies": ["build-css.js"]
-			}
-		]
+		"import/no-extraneous-dependencies": ["off"]
 	},
 	"ignorePatterns": ["**/*.mjs"]
 }

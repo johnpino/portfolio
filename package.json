@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "next build && node build-css.js",
 		"build:storybook": "storybook build",
 		"build:dictionary": "node build-css.js",
 		"start": "next start",
