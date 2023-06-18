@@ -1,0 +1,32 @@
+{
+	"opacity": {
+		"none": {
+			"value": "0",
+			"type": "opacity"
+		},
+		"extraLow": {
+			"value": "0.1",
+			"type": "opacity"
+		},
+		"low": {
+			"value": "0.25",
+			"type": "opacity"
+		},
+		"medium": {
+			"value": "0.5",
+			"type": "opacity"
+		},
+		"high": {
+			"value": "0.75",
+			"type": "opacity"
+		},
+		"extraHigh": {
+			"value": "0.9",
+			"type": "opacity"
+		},
+		"full": {
+			"value": "1",
+			"type": "opacity"
+		}
+	}
+}

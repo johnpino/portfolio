@@ -1,0 +1,36 @@
+{
+	"sizing": {
+		"scale": {
+			"value": "{dimensions.scale}",
+			"type": "dimension"
+		},
+		"1": {
+			"value": "8",
+			"type": "sizing"
+		},
+		"2": {
+			"value": "{sizing.1} * {sizing.scale}",
+			"type": "sizing"
+		},
+		"3": {
+			"value": "{sizing.2} * {sizing.scale}",
+			"type": "sizing"
+		},
+		"4": {
+			"value": "{sizing.3} * {sizing.scale}",
+			"type": "sizing"
+		},
+		"5": {
+			"value": "{sizing.4} * {sizing.scale}",
+			"type": "sizing"
+		},
+		"6": {
+			"value": "{sizing.5} * {sizing.scale}",
+			"type": "sizing"
+		},
+		"7": {
+			"value": "{sizing.6} * {sizing.scale}",
+			"type": "sizing"
+		}
+	}
+}

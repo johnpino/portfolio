@@ -1,0 +1,24 @@
+{
+	"fontSizes": {
+		"xs": {
+			"value": "{fontSizes.body} * 0.75",
+			"type": "fontSizes"
+		},
+		"sm": {
+			"value": "{fontSizes.body} * 0.875",
+			"type": "fontSizes"
+		},
+		"body": {
+			"value": "16",
+			"type": "fontSizes"
+		},
+		"lg": {
+			"value": "{fontSizes.body} * 1.125",
+			"type": "fontSizes"
+		},
+		"xl": {
+			"value": "{fontSizes.body} * 1.25",
+			"type": "fontSizes"
+		}
+	}
+}

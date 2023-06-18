@@ -1,0 +1,10 @@
+{
+	"palette": {
+		"colors": {
+			"main": {
+				"value": "{colors.amaranth.default}",
+				"type": "color"
+			}
+		}
+	}
+}

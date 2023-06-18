@@ -1,0 +1,12 @@
+{
+	"colors": {
+		"background": {
+			"value": "{colors.neutral.dark.80}",
+			"type": "color"
+		},
+		"foreground": {
+			"value": "{colors.white}",
+			"type": "color"
+		}
+	}
+}

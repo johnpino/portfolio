@@ -1,0 +1,28 @@
+{
+	"dimensions": {
+		"scale": {
+			"value": "2",
+			"type": "dimension"
+		},
+		"xs": {
+			"value": "4",
+			"type": "dimension"
+		},
+		"sm": {
+			"value": "{dimensions.xs} * {dimensions.scale}",
+			"type": "dimension"
+		},
+		"md": {
+			"value": "{dimensions.sm} * {dimensions.scale}",
+			"type": "dimension"
+		},
+		"lg": {
+			"value": "{dimensions.md} * {dimensions.scale}",
+			"type": "dimension"
+		},
+		"xl": {
+			"value": "{dimensions.lg} * {dimensions.scale}",
+			"type": "dimension"
+		}
+	}
+}

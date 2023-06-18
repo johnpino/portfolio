@@ -6,7 +6,7 @@
 				"y": "0",
 				"blur": "15",
 				"spread": "-5",
-				"color": "($colors.black, 0.2)",
+				"color": "rgba({colors.black}, 0.2)",
 				"type": "dropShadow"
 			},
 			"type": "boxShadow"

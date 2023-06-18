@@ -5,23 +5,23 @@
 			"type": "spacing"
 		},
 		"xs": {
-			"value": "2",
+			"value": "{dimensions.xs}",
 			"type": "spacing"
 		},
 		"sm": {
-			"value": "4",
+			"value": "{dimensions.sm}",
 			"type": "spacing"
 		},
 		"md": {
-			"value": "8",
+			"value": "{dimensions.md}",
 			"type": "spacing"
 		},
 		"lg": {
-			"value": "16",
+			"value": "{dimensions.lg}",
 			"type": "spacing"
 		},
 		"xl": {
-			"value": "32",
+			"value": "{dimensions.xl}",
 			"type": "spacing"
 		}
 	}

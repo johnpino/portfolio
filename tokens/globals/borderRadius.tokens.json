@@ -4,16 +4,20 @@
 			"value": "0",
 			"type": "borderRadius"
 		},
+		"xs": {
+			"value": "{dimensions.xs}",
+			"type": "borderRadius"
+		},
 		"sm": {
-			"value": "4",
+			"value": "{dimensions.sm}",
 			"type": "borderRadius"
 		},
 		"md": {
-			"value": "8",
+			"value": "{dimensions.md}",
 			"type": "borderRadius"
 		},
 		"lg": {
-			"value": "16",
+			"value": "{dimensions.lg}",
 			"type": "borderRadius"
 		},
 		"full": {
