@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const { registerTransforms, transforms } = require('@tokens-studio/sd-transforms')
 const StyleDictionaryPackage = require('style-dictionary')
 
@@ -61,8 +62,8 @@ globals.buildAllPlatforms()
  */
 
 const components = StyleDictionaryPackage.extend({
-	include: [`src/design-tokens/globals/*.tokens.json`, `src/design-tokens/themes/**/*.tokens.json`],
-	source: [`src/design-tokens/components/*.tokens.json`],
+	include: [`src/design-tokens/globals/*.tokens.json`, `src/design-tokens/themes/base/*.tokens.json`],
+	source: [`src/components/**/*.tokens.json`],
 	platforms: {
 		scss: {
 			transformGroup: 'custom',
