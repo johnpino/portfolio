@@ -3,11 +3,11 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "\"npm run build:dictionary\" && next dev & chokidar &  \"src/**/*.tokens.json\" -c \"npm run build:dictionary\"",
+		"dev": "next dev",
 		"build": "node build-css.js && next build",
 		"build:storybook": "storybook build",
 		"build:dictionary": "node process-design-tokens.js",
-		"watch:dictionary": "chokidar  \"src/**/*.tokens.json\" -c \"npm run build:dictionary\"",
+		"watch:dictionary": "npm run build:dictionary && chokidar  \"src/**/*.tokens.json\" -c \"npm run build:dictionary\"",
 		"start": "next start",
 		"lint": "next lint",
 		"format": "prettier --check .",
