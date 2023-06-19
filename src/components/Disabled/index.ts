@@ -1,4 +1,5 @@
-import Disabled from './Disabled.preview'
+import DisabledPreview from './Disabled.preview'
+import DisabledSkeleton from './Disabled.skeleton'
 
-export default Disabled
+export { DisabledPreview, DisabledSkeleton }
 export type { DisabledProps } from './Disabled.skeleton'

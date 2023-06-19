@@ -5,10 +5,10 @@ import { draftMode } from 'next/headers'
 
 import type { Page } from '@/types/Page'
 
-import features from './features'
+import features from './featuresPreview'
 import featuresSkeleton from './featuresSkeletons'
 
-import type { FeaturesTypes } from './features'
+import type { FeaturesTypes } from './featuresPreview'
 import type { FeaturesSkeletonsTypes } from './featuresSkeletons'
 
 export default function RenderFeatures({ data }: { data: Page | null }) {

@@ -6,7 +6,7 @@ import type { Feature } from '@/types/Page'
 const features: {
 	[key: string]: ComponentType<Feature>
 } = {
-	Disabled: dynamic(() => import('@/components/Disabled')),
+	Disabled: dynamic(() => import('@/components/Disabled/Disabled.preview')),
 }
 
 type KeysTypes = keyof typeof features

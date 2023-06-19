@@ -1,6 +1,6 @@
 import React from 'react'
 
-import useDisabled from './Disabled.hooks'
+import { useDisabled } from './Disabled.hooks'
 
 export type DisabledProps = {
 	heading1stRow: string

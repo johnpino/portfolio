@@ -2,7 +2,7 @@ import { clsx } from 'clsx'
 
 import styles from './Disabled.module.scss'
 
-export default function useDisabled() {
+export function useDisabled() {
 	const classes = {
 		disabled: clsx(styles.disabled),
 		heading: clsx(styles.disabled__heading),
