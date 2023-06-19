@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "node build-css.js && next build",
+		"build": "npm run build:dictionary && next build",
 		"build:storybook": "storybook build",
 		"build:dictionary": "node process-design-tokens.js",
 		"watch:dictionary": "npm run build:dictionary && chokidar  \"src/**/*.tokens.json\" -c \"npm run build:dictionary\"",
