@@ -1,0 +1,5 @@
+{{#if preview ~}}import {{name}}Preview from './{{name}}.preview'{{/if ~}}
+import {{name}}Skeleton from './{{name}}.skeleton'
+
+export { {{#if preview ~}}{{name}}Preview,{{/if ~}} {{name}}Skeleton }
+export type { {{name}}Props } from './{{name}}.skeleton'

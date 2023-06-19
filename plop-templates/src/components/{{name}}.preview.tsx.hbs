@@ -1,0 +1,13 @@
+'use client'
+
+import { Feature } from '@/types/Page'
+import React from 'react'
+
+import { usePreview } from '@/hooks/usePreview'
+import {{name}}Skeleton from './{{name}}.skeleton'
+
+export default function {{name}}(props: Feature) {
+	const { updatedProps, inspectorProps } = usePreview(props)
+
+	return <{{name}}Skeleton {...updatedProps} inspectorProps={inspectorProps} />
+}

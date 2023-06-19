@@ -1,0 +1,12 @@
+import React from 'react'
+
+import { render, screen } from '@testing-library/react'
+
+import {{name}}Skeleton from './{{name}}.skeleton'
+import {{name}}Mock from './{{name}}.mocks'
+
+describe('{{name}}', () => {
+	test('should render', () => {
+		render(<{{name}}Skeleton {...{{name}}Mock} />)
+	})
+})

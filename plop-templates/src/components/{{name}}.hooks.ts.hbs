@@ -1,0 +1,14 @@
+import { clsx } from 'clsx'
+
+import styles from './{{name}}.module.scss'
+
+import type { {{name}}Props } from './{{name}}.skeleton'
+
+export function use{{name}}(props: {{name}}Props) {
+	const classes = {
+		{{camelCase name}}: clsx(styles.{{dashCase name}}),
+	}
+	return {
+		classes,
+	}
+}
