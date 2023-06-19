@@ -4,8 +4,4 @@
 @import url('@/vars/themes/_base.css');
 @import url('@/vars/components/_components.css');
 
-body {
-	background: var(--colors-background);
-}
-
 @import url('@/vars/themes/_dark.css') (prefers-color-scheme: dark);

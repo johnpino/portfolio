@@ -25,7 +25,7 @@ export default function RenderFeatures({ data }: { data: Page | null }) {
 		const Component: FeaturesTypes | FeaturesSkeletonsTypes = components[feature.__typename]
 
 		return (
-			<main key={feature.sys.id} className="flex flex-col items-center justify-center min-h-screen p-24">
+			<main key={feature.sys.id}>
 				<Component {...feature} />
 			</main>
 		)

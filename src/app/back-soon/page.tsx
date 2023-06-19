@@ -10,5 +10,11 @@ export default async function BackSoon() {
 
 	const data = await getPage('back-soon', isDraftMode)
 
-	return <RenderFeatures data={data} />
+	return (
+		<div className="grid grid--full-height grid--center">
+			<div className="col-12">
+				<RenderFeatures data={data} />
+			</div>
+		</div>
+	)
 }
