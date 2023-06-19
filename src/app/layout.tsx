@@ -11,8 +11,12 @@ import '@contentful/live-preview/style.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-	title: "John Pino's Portfolio",
-	description: 'Frontend Development',
+	title: 'John Pino | Frontend Development',
+	description: 'John Pino - Frontend Development',
+	viewport: {
+		width: 'device-width',
+		initialScale: 1,
+	},
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
