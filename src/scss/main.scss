@@ -1,1 +1,8 @@
-@import 'base/normalize';
+// Abstract
+@import 'abstracts/variables', 'abstracts/mixins';
+
+// Base
+@import 'base/normalize', 'base/base';
+
+// Layout
+@import 'layout/grid';

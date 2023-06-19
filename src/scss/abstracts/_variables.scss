@@ -1,0 +1,10 @@
+// Breakpoints
+$breakpoints: (
+	medium: 640px,
+	large: 1280px,
+);
+
+// Grid System
+$container-max-width: 1024px;
+$columns: 12;
+$gap: var(--dimensions-md);
