@@ -5,10 +5,7 @@ import { use{{name}} } from './{{name}}.hooks'
 export type {{name}}Props = {}
 
 export default function {{name}}Skeleton(props: {{name}}Props) {
-	const { classes } = use{{name}}()
+	const { classes } = use{{name}}(props)
 
-	return (
-		<div className={classes.{{camelCase name}} }>
-		</div>
-	)
+	return <div className={classes.{{camelCase name}} }>{{name}}</div>
 }
