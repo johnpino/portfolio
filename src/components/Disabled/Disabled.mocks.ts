@@ -1,10 +1,6 @@
-import { Feature } from '@/types/Page'
+import type { DisabledProps } from './Disabled.skeleton'
 
-const DisabledMock: Feature = {
-	__typename: 'Disabled',
-	sys: {
-		id: '22dQ9kI0LmOzCrMgydJKw5',
-	},
+const DisabledMock: DisabledProps = {
 	heading1stRow: 'From the Desk of',
 	heading2ndRow: 'John Pino',
 	subheading: 'Frontend Development',
