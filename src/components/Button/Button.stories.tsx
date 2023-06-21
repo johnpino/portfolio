@@ -20,6 +20,7 @@ export const Default: Story = {
 		isDisabled: false,
 		children: <>Button</>,
 		variant: 'primary',
+		size: 'small',
 		// eslint-disable-next-line no-alert
 		onPress: () => alert('Click'),
 		fullWidth: {
@@ -34,7 +35,7 @@ export const Link: Story = {
 	args: {
 		elementType: 'a',
 		isDisabled: false,
-		children: <div>Button</div>,
+		children: <>Button</>,
 		variant: 'primary',
 		href: '/',
 		target: '_blank',

@@ -7,6 +7,9 @@
 		"foreground": {
 			"value": "{colors.neutral.dark.80}",
 			"type": "color"
+		},
+		"main": {
+			"value": "{colors.amaranth.default}"
 		}
 	}
 }
