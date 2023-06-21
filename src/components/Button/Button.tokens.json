@@ -1,4 +1,16 @@
 {
 	"Button": {
+		"borderRadius": {
+			"value": "{borderRadius.xs}",
+			"type": "borderRadius"
+		},
+		"paddingVertical": {
+			"value": "{spacing.md}",
+			"type": "spacing"
+		},
+		"paddingHorizontal": {
+			"value": "{spacing.sm}",
+			"type": "spacing"
+		}
 	}
 }

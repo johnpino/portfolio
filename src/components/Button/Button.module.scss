@@ -1,3 +1,37 @@
+@import '@/src/scss/abstracts/mixins';
+
 .button {
-	color: red;
+	border: none;
+
+	border-radius: var(--button-border-radius);
+	padding: var(--button-padding-horizontal) var(--button-padding-vertical);
+
+	@include button-variant('primary');
+	@include button-variant('secondary');
+
+	@include button-size('small');
+	@include button-size('medium');
+	@include button-size('large');
+
+	&--full-width {
+		width: 100%;
+	}
+
+	@include media-query('small') {
+		&--full-width-small {
+			width: 100%;
+		}
+	}
+
+	@include media-query('medium') {
+		&--full-width-medium {
+			width: 100%;
+		}
+	}
+
+	@include media-query('large') {
+		&--full-width-large {
+			width: 100%;
+		}
+	}
 }

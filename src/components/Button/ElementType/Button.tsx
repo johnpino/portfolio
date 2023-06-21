@@ -9,7 +9,7 @@ export default function Default(props: ButtonProps) {
 
 	return (
 		// eslint-disable-next-line react/button-has-type
-		<button className={classes.button} {...buttonProps} ref={ref}>
+		<button className={classes} {...buttonProps} ref={ref}>
 			{props.children}
 		</button>
 	)

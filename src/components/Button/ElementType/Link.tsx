@@ -12,7 +12,7 @@ export default function Link(props: ButtonProps) {
 	const { href, target } = props
 
 	return (
-		<a className={classes.button} {...buttonProps} href={href} target={target} ref={ref}>
+		<a className={classes} {...buttonProps} href={href} target={target} ref={ref}>
 			{props.children}
 		</a>
 	)

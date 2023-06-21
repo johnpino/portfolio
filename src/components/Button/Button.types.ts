@@ -2,10 +2,20 @@ import { ReactNode } from 'react'
 
 type VariantsTypes = 'primary' | 'secondary'
 
+type SizesTypes = 'small' | 'medium' | 'large'
+
+type FullWidthPerBreakpoint = {
+	small: boolean
+	medium?: boolean
+	large?: boolean
+}
+
 export type ButtonProps = {
 	isDisabled?: boolean
 	children: ReactNode
 	variant?: VariantsTypes
+	size?: SizesTypes
+	fullWidth?: boolean | FullWidthPerBreakpoint
 } & (
 	| {
 			elementType: 'a'

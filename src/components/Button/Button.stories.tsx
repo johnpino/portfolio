@@ -18,10 +18,15 @@ export const Default: Story = {
 	args: {
 		elementType: 'button',
 		isDisabled: false,
-		children: <div>Button</div>,
+		children: <>Button</>,
 		variant: 'primary',
 		// eslint-disable-next-line no-alert
 		onPress: () => alert('Click'),
+		fullWidth: {
+			small: false,
+			medium: false,
+			large: false,
+		},
 	},
 }
 
