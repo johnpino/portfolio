@@ -4,13 +4,45 @@
 			"value": "{borderRadius.xs}",
 			"type": "borderRadius"
 		},
-		"paddingVertical": {
-			"value": "{spacing.md}",
-			"type": "spacing"
+		"primary": {
+			"initial": {
+				"backgroundColor": {
+					"value": "{colors.main}"
+				},
+				"color": {
+					"value": "{colors.foreground}"
+				}
+			}
 		},
-		"paddingHorizontal": {
-			"value": "{spacing.sm}",
-			"type": "spacing"
+		"small": {
+			"paddingVertical": {
+				"value": "{spacing.sm}",
+				"type": "spacing"
+			},
+			"paddingHorizontal": {
+				"value": "{spacing.lg}",
+				"type": "spacing"
+			}
+		},
+		"medium": {
+			"paddingVertical": {
+				"value": "{spacing.md}",
+				"type": "spacing"
+			},
+			"paddingHorizontal": {
+				"value": "{spacing.lg}",
+				"type": "spacing"
+			}
+		},
+		"large": {
+			"paddingVertical": {
+				"value": "{spacing.lg}",
+				"type": "spacing"
+			},
+			"paddingHorizontal": {
+				"value": "{spacing.lg}",
+				"type": "spacing"
+			}
 		}
 	}
 }
