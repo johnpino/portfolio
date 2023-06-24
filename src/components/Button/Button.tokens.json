@@ -7,10 +7,36 @@
 		"primary": {
 			"initial": {
 				"backgroundColor": {
-					"value": "{colors.main}"
+					"value": "{colors.main.default}",
+					"type": "color"
 				},
 				"color": {
-					"value": "{colors.foreground}"
+					"value": "{colors.foreground}",
+					"type": "color"
+				}
+			},
+			"hover": {
+				"backgroundColor": {
+					"value": "{colors.main.dark}",
+					"type": "color"
+				},
+				"color": {
+					"value": "{colors.foreground}",
+					"type": "color"
+				}
+			},
+			"focus": {
+				"backgroundColor": {
+					"value": "{colors.main.dark}",
+					"type": "color"
+				},
+				"color": {
+					"value": "{colors.foreground}",
+					"type": "color"
+				},
+				"outlineColor": {
+					"value": "{colors.main.light}",
+					"type": "color"
 				}
 			}
 		},

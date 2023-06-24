@@ -1,15 +1,12 @@
 {
 	"colors": {
 		"background": {
-			"value": "{colors.white}",
+			"value": "{colors.main}",
 			"type": "color"
 		},
 		"foreground": {
-			"value": "{colors.neutral.dark.80}",
+			"value": "{colors.white}",
 			"type": "color"
-		},
-		"main": {
-			"value": "{colors.amaranth.default}"
 		}
 	}
 }

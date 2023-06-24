@@ -42,19 +42,22 @@
 		background-color: var(--button-#{$variant}-initial-background-color);
 		color: var(--button-#{$variant}-initial-color);
 
-		&:focus {
+		&:focus-visible {
 			border-color: var(--button-#{$variant}-focus-border-color);
 			background-color: var(--button-#{$variant}-focus-background-color);
-			color: var(--button-#{$variant}-focus-text-color);
-			box-shadow: var(--button-#{$variant}-drop-shadow);
+			color: var(--button-#{$variant}-focus-color);
+
+			outline-style: dashed;
+			outline-width: 2px;
+			outline-color: var(--button-#{$variant}-focus-outline-color);
 		}
 	}
 
 	@media (hover: hover) {
-		&.button--#{$variant}-hover:hover {
+		&.button--#{$variant}:hover {
 			border-color: var(--button-#{$variant}-hover-border-color);
 			background-color: var(--button-#{$variant}-hover-background-color);
-			color: var(--button-#{$variant}-hover-text-color);
+			color: var(--button-#{$variant}-hover-color);
 		}
 	}
 }

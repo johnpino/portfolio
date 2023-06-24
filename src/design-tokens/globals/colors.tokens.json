@@ -12,6 +12,20 @@
 			"value": "#fff",
 			"type": "color"
 		},
+		"main": {
+			"default": {
+				"value": "{colors.amaranth.default}",
+				"type": "color"
+			},
+			"dark": {
+				"value": "{colors.amaranth.dark.20}",
+				"type": "color"
+			},
+			"light": {
+				"value": "{colors.amaranth.light.20}",
+				"type": "color"
+			}
+		},
 		"amaranth": {
 			"default": {
 				"value": "#e82852",

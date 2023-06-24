@@ -45,9 +45,9 @@ export function useButton(props: ButtonProps & { ref: React.MutableRefObject<nul
 
 	return {
 		classes: getClasses({
-			variant: props.variant,
-			size: props.size,
-			isDisabled: props.isDisabled,
+			variant: props.variant || 'primary',
+			size: props.size || 'small',
+			isDisabled: props.isDisabled || false,
 			fullWidth: props.fullWidth,
 		}),
 		buttonProps: buttonAriaProps,
@@ -59,8 +59,8 @@ export function useLink(props: ButtonProps & { ref: React.MutableRefObject<null>
 
 	return {
 		classes: getClasses({
-			variant: props.variant,
-			size: props.size,
+			variant: props.variant || 'primary',
+			size: props.size || 'small',
 			isDisabled: props.isDisabled,
 			fullWidth: props.fullWidth,
 		}),
