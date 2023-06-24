@@ -35,7 +35,7 @@ export default function (plop) {
 				base: `plop-templates/src/components`,
 				destination: `./src/components/{{name}}`,
 				globOptions: {
-					ignore: [!preview ? 'plop-templates/src/components/{{name}}.preview.tsx.hbs' : ''],
+					ignore: [!preview ? 'plop-templates/src/components/{{name}}.preview.tsx.hbs' : ' '],
 				},
 			})
 
